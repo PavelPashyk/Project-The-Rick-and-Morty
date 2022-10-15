@@ -1,0 +1,34 @@
+.headereDay {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(23, 35, 38, 0.4);
+}
+
+.headereNight {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(23, 35, 38, 0.8);
+}
+
+.headere__box {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.headere__menuDay {
+  display: flex;
+  align-items: center;
+  color: rgb(0 200 255);;
+}
+.headere__menuNight {
+  display: flex;
+  align-items: center;
+  color: rgb(12, 118, 147);
+}
+
+.top {
+  transition: all ease-in-out 10s;
+}

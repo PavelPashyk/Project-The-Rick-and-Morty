@@ -1,0 +1,80 @@
+.btnForm,
+.btnStart,
+.btnClick {
+min-width: 150px;
+height: 60px;
+border-radius: 15px;
+font-weight: 600;
+font-size: 20px;
+text-transform: uppercase;
+transition: all ease-in-out .1s;
+}
+
+.btnReserve {
+  width: 50px;
+  height:30px;
+  border:1px solid rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnForm {
+  background-color: rgb(182, 237, 252);
+  border: 3px solid rgb(126, 164, 174);
+  color: rgb(0 56 141);
+}
+
+.btnForm:hover {
+  background-color: rgb(100, 219, 252);
+  border: 3px solid rgb(102, 112, 115);
+  box-shadow: 4px 4px 9px rgb(100, 219, 252);
+}
+
+.btnForm:active {
+  background-color: rgb(67, 151, 174);
+  border: 3px solid rgb(67, 74, 76);
+  color: rgb(3, 27, 63);
+}
+
+.btnStart{
+  background-color: rgb(13, 90, 51);
+  border: 3px solid rgb(83, 194, 98);
+  color: rgb(81, 206, 227);
+  box-shadow: inset 2px 2px 5px rgba(90, 223, 108, 0.5), 0px 0px 10px 2px rgb(90, 223, 108);
+  margin-left: 40px;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.btnStart:hover {
+  background-color: rgb(23, 139, 50);
+  border: 3px solid rgb(90, 223, 108);
+  color: rgb(74, 245, 222);
+  
+}
+
+.btnStart:active {
+  background-color: rgb(22, 230, 11);
+  border: 3px solid rgb(83, 194, 98);
+  color: rgb(9, 87, 38);
+  box-shadow: inset 2px 2px 5px rgba(90, 223, 108, 0.5), 0px 0px 20px 2px rgb(22, 230, 11);
+}
+
+.btnClick{
+  background-color: rgb(10, 13, 80);
+  border: 3px solid rgb(13, 3, 33);
+  color: rgb(38, 114, 220);
+}
+
+.btnClick:hover {
+  background-color: rgb(32, 6, 138);
+  border: 3px solid rgb(2, 2, 39);
+  box-shadow: 4px 4px 9px rgb(32, 6, 138);
+}
+
+.btnClick:active {
+  background-color: rgb(54, 13, 90);
+  border: 3px solid rgb(148, 83, 194);
+  color: rgb(103, 1, 166);
+}
