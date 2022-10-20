@@ -1,0 +1,10 @@
+.characterList__boxInner {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.characterList__box {
+  padding: 35px 15px;
+}

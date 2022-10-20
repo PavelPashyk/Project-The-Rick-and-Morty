@@ -1,0 +1,14 @@
+.form__textBlock {
+  margin: 0 auto;
+}
+
+.form__text {
+  color: rgb(65 39 24);
+  font-size: 28px;
+  user-select: none;
+}
+
+.form__text > span {
+  color: rgb(244, 47, 13);
+  cursor: pointer;
+}

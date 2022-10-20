@@ -1,0 +1,31 @@
+.form__title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px auto;
+  user-select: none;
+}
+
+.titleNotActive {
+  color: rgb(244, 47, 13);
+  margin: 0px 10px;
+}
+
+.titleActive {
+  color: rgb(65 39 24);
+  margin: 0px 10px;
+  cursor: default;
+}
+
+.form__login {
+  position: relative;
+}
+
+.form__login:after {
+  content: "";
+  border-bottom: 3px solid black;
+  position: absolute;
+  right: -35px;
+  bottom: 22px;
+  rotate: 90deg;
+  width: 50px;
+}

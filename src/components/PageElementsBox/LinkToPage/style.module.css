@@ -1,0 +1,19 @@
+.linkToPageStyle {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 35px;
+  font-family: "Shadows Into Light", cursive;
+  letter-spacing: 2px;
+  color: rgb(0 175 199);
+  cursor: pointer;
+  user-select: none;
+}
+
+.linkToPageStyle:hover {
+  color: rgb(178 244 255);
+}
+
+.linkToPageStyle:active {
+  color: rgb(247 243 104);
+}

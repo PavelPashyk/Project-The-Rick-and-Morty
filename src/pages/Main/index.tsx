@@ -1,13 +1,19 @@
-
-import { ContainerBack } from "../../components/ContainerBack";
-import { Header } from "../../components/Header";
+import { ListCharacters } from "../../components/СharactersBox/ListCharacters";
+import { ContainerBack } from "../../components/PageElementsBox/ContainerBack";
+import { Header } from "../../components/HeaderBox/Header";
+import { charactersArrayTest } from "../../mocks/charactersArrayTest";
 import styles from "./style.module.css";
+import { BlockCharacters } from "../../components/СharactersBox/BlockCharacters";
+import { ContextThema } from "../../App";
+import { useContext } from "react";
 
 export const Main = () => {
-  return (
-  <ContainerBack stylesBackGround={"bgAllDay"}>
-    <Header/>
+  const { isThema, setIsThema } = useContext(ContextThema);
 
-  </ContainerBack>
-  )
-}
+  return (
+    <ContainerBack stylesBackGround={`${isThema ? "bgAllNight" : "bgAllDay"}`}>
+      <Header />
+      <BlockCharacters />
+    </ContainerBack>
+  );
+};

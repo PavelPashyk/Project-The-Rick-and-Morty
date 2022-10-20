@@ -1,0 +1,67 @@
+.bgFirst,
+.bgAllDay,
+.bgAllNight,
+.bgFormDay,
+.bgFormNight,
+.bgFinish,
+.bgNotFound {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.bgFirst {
+  background-image: url("./imageBackground/backgroundFirst.jpg");
+  background-position: right bottom;
+  position: relative;
+}
+
+.bgFirst::after {
+  content: "";
+  display: block;
+  position: absolute;
+  max-width: 600px;
+  width: 100%;
+  max-height: 200px;
+  height: 100%;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+  background-image: url("./imageBackground/rick-and-morty-logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.bgAllDay {
+  background-image: url("./imageBackground/backgroundAll-Day.jpg");
+}
+
+.bgAllNight {
+  background-image: url("./imageBackground/backgroundAll-Night.jpg");
+}
+
+.bgFormDay {
+  background-image: url("./imageBackground/backgroundForm-Day.jpg");
+}
+
+.bgFormNight {
+  background-image: url("./imageBackground/backgroundForm-Night.jpg");
+}
+
+.bgFinish {
+  background-image: url("./imageBackground/backgroundFinish.jpg");
+}
+
+.bgNotFound {
+  background-image: url("./imageBackground/backgroundNotFound.jpg");
+}
+
+.boxFirst {
+  display: flex;
+  align-items: center;
+}
