@@ -3,14 +3,18 @@ import { ContextThema } from "../../../App";
 import { IPropsCharacterItem } from "../../../types/character";
 import styles from "./style.module.css";
 
+interface IPropsCharactersItem extends IPropsCharacterItem {
+  onClickCharacter?: () => void;
+}
+
 export const ItemCharacter = ({
   name,
   status,
   species,
   image,
-}: IPropsCharacterItem) => {
+  onClickCharacter,
+}: IPropsCharactersItem) => {
   const { isThema, setIsThema } = useContext(ContextThema);
-
   return (
     <div
       className={
@@ -23,7 +27,7 @@ export const ItemCharacter = ({
         className={styles.character__img}
         src={image}
         alt={`Character image: ${name}`}
-        onClick={() => {}}
+        onClick={onClickCharacter}
       />
       <h2 className={styles.character__titleName}>{name}</h2>
       <div className={styles.character__textBlock}>

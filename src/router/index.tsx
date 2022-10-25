@@ -5,11 +5,13 @@ import { Main } from "../pages/Main";
 import { PageStart } from "../pages/PageStart";
 import { PageLast } from "../pages/PageLast";
 import { PageNotFound } from "../pages/PageNotFound";
+import { PageFullPost } from "../pages/PageFullPost";
 
 export const RootRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<PageStart />} />
+      <Route path="/page_full_post/:personId" element={<PageFullPost />} />
       <Route path="/main" element={<Main />} />
       <Route path="/registration" element={<PageRegistration />} />
       <Route path="/login" element={<PageLogin />} />

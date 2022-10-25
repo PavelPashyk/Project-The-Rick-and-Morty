@@ -23,12 +23,16 @@ export const FormLogin = () => {
               type={"email"}
               onChangeInput={() => {}}
               placeholder={"Enter your email"}
+              inputSvg={"email"}
+              classNameInput={styles.inputStyle}
             />
             <p className={styles.form__text}>Password</p>
             <Input
               type={"password"}
               onChangeInput={() => {}}
               placeholder={"Confirm a password"}
+              inputSvg={"password"}
+              classNameInput={styles.inputStyle}
             />
             <Button
               text={"Login"}

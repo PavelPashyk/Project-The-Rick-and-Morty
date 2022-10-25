@@ -1,6 +1,6 @@
 .character__blockItemDay {
   width: 224px;
-  height: 300px;
+  height: 350px;
   padding: 10px;
   background: linear-gradient(
     45deg,
@@ -17,12 +17,12 @@
   transition: all ease 0.3s;
   box-shadow: inset 2px 2px 25px rgba(77, 241, 225, 0.5),
     0px 0px 20px 4px rgb(90 223 108);
-  cursor: pointer;
+  cursor: default;
 }
 
 .character__blockItemNight {
   width: 224px;
-  height: 300px;
+  height: 350px;
   padding: 10px;
   background: linear-gradient(
     45deg,
@@ -39,7 +39,7 @@
   transition: all ease 0.3s;
   box-shadow: inset 2px 2px 25px rgb(244 252 255 / 50%),
     0px 0px 20px 4px rgb(112 119 143);
-  cursor: pointer;
+  cursor: default;
 }
 
 @keyframes gradient {
@@ -92,6 +92,7 @@
   margin: 10px 0px;
   overflow: hidden;
   user-select: none;
+  cursor: pointer;
 }
 
 .character__blockItemDay h2 {
@@ -118,4 +119,8 @@
 
 .character__text {
   font-size: 19px;
+}
+
+.character__textBlock span {
+  color:#000f46;
 }

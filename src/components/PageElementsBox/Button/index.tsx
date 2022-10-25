@@ -1,6 +1,11 @@
 import styles from "./style.module.css";
 
-type btnStyles = "btnForm" | "btnStart" | "btnClick" | "btnReserve";
+type btnStyles =
+  | "btnForm"
+  | "btnStart"
+  | "btnClick"
+  | "btnFullPost"
+  | "btnReserve";
 
 interface IPropsBtn {
   text: string;
@@ -19,6 +24,8 @@ const getStylesBtn = (typeStyles: btnStyles) => {
     return styles.btnStart;
   } else if (typeStyles === "btnClick") {
     return styles.btnClick;
+  } else if (typeStyles === "btnFullPost") {
+    return styles.btnFullPost;
   } else {
     return styles.btnReserve;
   }

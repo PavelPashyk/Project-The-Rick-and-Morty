@@ -6,7 +6,7 @@ import styles from "./style.module.css";
 export const ChexBoxThema = () => {
   const { isThema, setIsThema } = useContext(ContextThema);
 
-  const toggle = () => {
+  const toggleThema = () => {
     if (isThema) {
       setIsThema(false);
     } else {
@@ -19,7 +19,7 @@ export const ChexBoxThema = () => {
       <Input
         classNameInput={styles.chexbox__input}
         type="checkbox"
-        onChangeInput={toggle}
+        onChangeInput={toggleThema}
       />
       <div
         className={`${

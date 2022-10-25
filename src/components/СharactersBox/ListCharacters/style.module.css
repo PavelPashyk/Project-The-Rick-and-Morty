@@ -8,3 +8,36 @@
 .characterList__box {
   padding: 35px 15px;
 }
+
+.characterList__boxBtn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.characterList__count {
+  background: linear-gradient( 45deg, rgba(34, 105, 153, 0.8), rgba(109, 213, 250, 0.9), rgba(158, 255, 166, 0.8) );
+  border: 3px solid rgb(66, 12, 174);
+  color: #0d1f62;
+  animation: style_gradient__tTkq0 6s ease infinite;
+  background-size: 200% 200%;
+  min-width: 150px;
+  height: 60px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
