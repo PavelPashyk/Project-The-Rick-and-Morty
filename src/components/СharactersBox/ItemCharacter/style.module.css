@@ -1,0 +1,121 @@
+.character__blockItemDay {
+  width: 224px;
+  height: 300px;
+  padding: 10px;
+  background: linear-gradient(
+    45deg,
+    rgba(34, 105, 153, 0.8),
+    rgba(109, 213, 250, 0.8),
+    rgba(158, 255, 166, 0.8)
+  );
+  border-radius: 15px;
+  background-size: 300% 300%;
+  animation: gradient 6s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all ease 0.3s;
+  box-shadow: inset 2px 2px 25px rgba(77, 241, 225, 0.5),
+    0px 0px 20px 4px rgb(90 223 108);
+  cursor: pointer;
+}
+
+.character__blockItemNight {
+  width: 224px;
+  height: 300px;
+  padding: 10px;
+  background: linear-gradient(
+    45deg,
+    rgb(97 43 227 / 80%),
+    rgb(42 113 141 / 80%),
+    rgb(134 144 193 / 80%)
+  );
+  border-radius: 15px;
+  background-size: 300% 300%;
+  animation: gradient 6s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all ease 0.3s;
+  box-shadow: inset 2px 2px 25px rgb(244 252 255 / 50%),
+    0px 0px 20px 4px rgb(112 119 143);
+  cursor: pointer;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.character__blockItemDay:hover {
+  background-color: rgb(12, 118, 147);
+  box-shadow: 0px 0px 10px 6px rgb(144, 2, 139);
+}
+.character__blockItemNight:hover {
+  background-color: rgb(104, 128, 135);
+  box-shadow: 0px 0px 10px 6px rgb(83, 104, 226);
+}
+
+.character__blockItemDay:active {
+  background-color: rgb(5, 1, 93);
+  box-shadow: none;
+  transition: all ease 0.1s;
+  border: 1px solid transparent;
+}
+.character__blockItemNight:active {
+  background-color: rgb(11, 217, 220);
+  box-shadow: none;
+  transition: all ease 0.1s;
+  border: 1px solid transparent;
+}
+
+.character__blockItemDay:active .character__titleName {
+  color: rgb(12, 253, 225);
+  transition: all linear 0.2s;
+}
+.character__blockItemNight:active .character__titleName {
+  color: rgb(12, 253, 153);
+  transition: all linear 0.2s;
+}
+
+.character__img {
+  width: 210px;
+  height: 210px;
+  border-radius: 55px 15px 40px 25px;
+  margin: 10px 0px;
+  overflow: hidden;
+  user-select: none;
+}
+
+.character__blockItemDay h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #0d1f62;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.character__blockItemNight h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1400bb;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.character__title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.character__text {
+  font-size: 19px;
+}

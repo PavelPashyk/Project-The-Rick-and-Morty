@@ -1,0 +1,54 @@
+.navBar__menu {
+  width: 70%;
+  padding: 10px 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.navBar__linkDay span {
+  color: rgb(27, 174, 237);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border-bottom: 2px solid transparent;
+}
+
+.navBar__linkNight span {
+  color: rgb(12, 118, 147);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border-bottom: 2px solid transparent;
+}
+
+.navBar__linkDay:hover span {
+  color: rgb(64 242 251);
+  border-bottom: 2px solid rgb(64 242 251);
+  transition: all 0.3s linear;
+}
+
+.navBar__linkNight:hover span {
+  color: rgb(12, 118, 147);
+  border-bottom: 2px solid rgb(64, 157, 251);
+  transition: all 0.3s linear;
+}
+
+.navBar__linkDay:active span {
+  color: rgb(225, 19, 19);
+  border-bottom: 2px solid rgb(239, 17, 17);
+}
+
+.navBar__linkNight:active span {
+  color: rgb(147, 75, 12);
+  border-bottom: 2px solid rgb(241, 97, 13);
+}
+
+.navBar__linkActive span {
+  color: rgb(0, 255, 68);
+  cursor: default;
+}
+
+.navBar__linkActive:hover span {
+  border-bottom: 2px solid transparent;
+  color: rgb(0, 255, 68);
+}

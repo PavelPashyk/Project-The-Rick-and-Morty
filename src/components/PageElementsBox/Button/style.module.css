@@ -1,0 +1,106 @@
+.btnForm,
+.btnStart,
+.btnClick {
+  min-width: 150px;
+  height: 60px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.1s;
+}
+
+.btnReserve {
+  width: 50px;
+  height: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnForm {
+  background-color: rgb(229 199 75);
+  border: 3px solid rgb(213 138 71);
+  color: rgb(244 72 59);
+  margin: 0 auto;
+}
+
+.btnForm:hover {
+  background-color: rgb(234 211 136);
+  border: 3px solid rgb(236 189 20);
+  box-shadow: 0px 0px 10px 4px rgb(232 188 17);
+  color: #412718;
+}
+
+.btnForm:active {
+  background-color: rgb(234 211 136);
+  border: 3px solid rgb(243, 212, 104);
+  box-shadow: none;
+  color: #fc0000;
+}
+
+.btnStart {
+  background-color: rgb(13, 90, 51);
+  border: 3px solid rgb(83, 194, 98);
+  color: rgb(81, 206, 227);
+  box-shadow: inset 2px 2px 5px rgba(90, 223, 108, 0.5),
+    0px 0px 10px 2px rgb(90, 223, 108);
+  margin-left: 40px;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.btnStart:hover {
+  background-color: rgb(23, 139, 50);
+  border: 3px solid rgb(90, 223, 108);
+  color: rgb(178 244 255);
+}
+
+.btnStart:active {
+  background-color: rgb(22, 230, 11);
+  border: 3px solid rgb(83, 194, 98);
+  color: rgb(9, 87, 38);
+  box-shadow: inset 2px 2px 5px rgba(90, 223, 108, 0.5),
+    0px 0px 20px 2px rgb(22, 230, 11);
+}
+
+.btnClick {
+  background: linear-gradient(
+    45deg,
+    rgba(34, 105, 153, 0.8),
+    rgba(109, 213, 250, 0.9),
+    rgba(158, 255, 166, 0.8)
+  );
+  border: 3px solid rgb(66, 12, 174);
+  color: #0d1f62;
+  animation: gradient 6s ease infinite;
+  background-size: 200% 200%;
+  position: relative;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.btnClick:hover {
+  background-color: rgb(53, 6, 244);
+  border: 3px solid rgb(151, 10, 239);
+  box-shadow: 0px 0px 19px rgb(83, 46, 232);
+  color: rgb(151, 10, 239);
+  transition: all ease 0.5s;
+}
+
+.btnClick:active {
+  border: 3px solid rgb(50, 255, 228);
+  color: rgb(50, 255, 228);
+  transition: all ease 0.1s;
+}

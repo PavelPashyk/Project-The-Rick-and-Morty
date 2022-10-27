@@ -1,22 +1,5 @@
-.linkStyle {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: rgb(0 175 199);
-  font-size: 30px;
-  font-family: 'Shadows Into Light', cursive;
-  letter-spacing: 2px;
-}
-
-.linkStyle:hover {
-  color: rgb(3, 121, 142);
-}
-
-.linkStyle:active {
-  color: rgb(81, 206, 227);
-}
-
-.block__inner {
+.pageStart__box {
   display: flex;
   align-items: center;
+  height: 100vh;
 }

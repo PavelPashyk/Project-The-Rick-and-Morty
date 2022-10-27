@@ -1,0 +1,22 @@
+.pageLast__box {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  color: rgb(126, 2, 98);
+  line-height: 2;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.link {
+  color: rgb(3, 121, 136);
+}
+
+.link:hover {
+  color: rgb(74, 186, 206);
+}
+
+.link:active {
+  color: rgb(125, 241, 251);
+}

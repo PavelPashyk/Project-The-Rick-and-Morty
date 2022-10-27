@@ -1,0 +1,87 @@
+.search__block {
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  caret-color: rgb(79 31 33);
+}
+
+.search__icon {
+  background-image: url("./icon-search.png");
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all linear 0.8s;
+}
+
+.search__textDay {
+  max-width: inherit;
+  width: inherit;
+  height: inherit;
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(212 191 72 / 21%);
+  border-radius: 40px;
+  border: 2px solid rgb(79 31 33);
+  padding: 10px 60px 10px 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: rgb(254, 246, 227);
+}
+
+.search__textNight {
+  max-width: inherit;
+  width: inherit;
+  height: inherit;
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(111, 153, 153, 0.3);
+  border-radius: 40px;
+  border: 2px solid rgb(1, 24, 24);
+  padding: 10px 60px 10px 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: rgb(254, 246, 227);
+}
+
+.search__btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search__block:hover .search__icon {
+  transform: rotateY(180deg);
+}
+
+.search__textDay:focus {
+  background-color: rgb(111, 153, 153, 0.6);
+}
+.search__textNight:focus {
+  background-color: rgb(111, 153, 153, 0.6);
+}
+
+.search__textDay:focus::placeholder {
+  color: rgb(75, 10, 111);
+}
+.search__textNight:focus::placeholder {
+  color: rgb(8, 64, 80);
+}
+
+.search__textDay::placeholder {
+  color: rgb(0 200 255);
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.search__textNight::placeholder {
+  color: rgb(12, 118, 147);
+  letter-spacing: 3px;
+  font-weight: 700;
+}
