@@ -24,12 +24,16 @@ export const FormRegistration = () => {
               onChangeInput={() => {}}
               placeholder={"Enter your name"}
               maxlength={20}
+              inputSvg={"name"}
+              classNameInput={styles.inputStyle}
             />
             <p className={styles.form__text}>Email</p>
             <Input
               type={"email"}
               onChangeInput={() => {}}
               placeholder={"Enter your email"}
+              inputSvg={"email"}
+              classNameInput={styles.inputStyle}
             />
             <p className={styles.form__text}>Password</p>
             <Input
@@ -37,6 +41,8 @@ export const FormRegistration = () => {
               onChangeInput={() => {}}
               placeholder={"Create a password"}
               maxlength={20}
+              inputSvg={"password"}
+              classNameInput={styles.inputStyle}
             />
             <p className={styles.form__text}>Password</p>
             <Input
@@ -44,6 +50,8 @@ export const FormRegistration = () => {
               onChangeInput={() => {}}
               placeholder={"Confirm a password"}
               maxlength={20}
+              inputSvg={"password"}
+              classNameInput={styles.inputStyle}
             />
             <Button
               text={"Register"}

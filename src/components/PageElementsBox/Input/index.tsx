@@ -1,5 +1,6 @@
 import styles from "./style.module.css";
 import { ChangeEventHandler } from "react";
+import { Svg } from "../Svg";
 
 interface IPropsInput {
   value?: string | number;
@@ -9,6 +10,7 @@ interface IPropsInput {
   name?: string;
   classNameInput?: string;
   onChangeInput?: ChangeEventHandler<HTMLInputElement>;
+  inputSvg?: string;
 }
 
 export const Input = ({
@@ -19,17 +21,21 @@ export const Input = ({
   name,
   classNameInput,
   onChangeInput,
+  inputSvg,
 }: IPropsInput) => {
   return (
-    <input
-      value={value}
-      placeholder={placeholder}
-      maxLength={maxlength}
-      minLength={0}
-      type={type}
-      name={name}
-      className={`${classNameInput} ${styles.inputStyle}`}
-      onChange={onChangeInput}
-    />
+    <div className={styles.inputBlock}>
+      <input
+        value={value}
+        placeholder={placeholder}
+        maxLength={maxlength}
+        minLength={0}
+        type={type}
+        name={name}
+        className={`${classNameInput}`}
+        onChange={onChangeInput}
+      />
+      <Svg id={`${inputSvg}`} />
+    </div>
   );
 };

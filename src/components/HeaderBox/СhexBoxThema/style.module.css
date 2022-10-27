@@ -4,7 +4,7 @@
   width: 65px;
   height: 26px;
   border-radius: 50px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .chexbox__sliderDay {
