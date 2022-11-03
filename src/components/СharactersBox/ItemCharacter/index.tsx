@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { ContextThema } from "../../../App";
+import { ContextAll } from "../../../App";
+import { no_image } from "../../../assets/images";
 import { IPropsCharacterItem } from "../../../types/character";
 import styles from "./style.module.css";
 
@@ -14,7 +15,7 @@ export const ItemCharacter = ({
   image,
   onClickCharacter,
 }: IPropsCharactersItem) => {
-  const { isThema, setIsThema } = useContext(ContextThema);
+  const { isThema, setIsThema } = useContext(ContextAll);
   return (
     <div
       className={
@@ -25,12 +26,18 @@ export const ItemCharacter = ({
     >
       <img
         className={styles.character__img}
-        src={image}
+        src={image ? image : `${no_image}`}
         alt={`Character image: ${name}`}
         onClick={onClickCharacter}
       />
       <h2 className={styles.character__titleName}>{name}</h2>
-      <div className={styles.character__textBlock}>
+      <div
+        className={
+          isThema
+            ? styles.character__textBlockNight
+            : styles.character__textBlockDay
+        }
+      >
         <p className={styles.character__text}>
           <span className={styles.character__title}>Status: </span>
           {status}

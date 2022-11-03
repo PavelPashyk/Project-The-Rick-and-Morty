@@ -15,7 +15,12 @@
 }
 
 .characterList__count {
-  background: linear-gradient( 45deg, rgba(34, 105, 153, 0.8), rgba(109, 213, 250, 0.9), rgba(158, 255, 166, 0.8) );
+  background: linear-gradient(
+    45deg,
+    rgba(34, 105, 153, 0.8),
+    rgba(109, 213, 250, 0.9),
+    rgba(158, 255, 166, 0.8)
+  );
   border: 3px solid rgb(66, 12, 174);
   color: #0d1f62;
   animation: style_gradient__tTkq0 6s ease infinite;

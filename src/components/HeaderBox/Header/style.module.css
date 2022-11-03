@@ -32,3 +32,26 @@
 .top {
   transition: all ease-in-out 10s;
 }
+
+.headere__title {
+  margin: 0 10px;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+
+.headereNight svg{
+  fill: rgb(12, 118, 147);
+  margin: 0 10px;
+
+}
+
+.headereDay svg:hover,
+.headereNight svg:hover{
+  fill: rgb(0, 255, 68);
+  transition: all .3s linear;
+}
+
+.headereDay svg{
+  fill: rgb(0 200 255);
+  margin: 0 10px;
+}

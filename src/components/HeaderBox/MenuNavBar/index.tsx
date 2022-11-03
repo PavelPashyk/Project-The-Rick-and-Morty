@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { ContextThema } from "../../../App";
+import { ContextAll } from "../../../App";
 import styles from "./style.module.css";
 
 export const MenuNavBar = () => {
-  const { isThema, setIsThema } = useContext(ContextThema);
+  const { isThema, setIsThema, user } = useContext(ContextAll);
 
   const getLinkThema = () =>
     isThema ? styles.navBar__linkNight : styles.navBar__linkDay;
@@ -42,26 +42,30 @@ export const MenuNavBar = () => {
           <span>All Characters</span>
         </NavLink>
       </li>
-      <li className={`${getLinkThema()}`}>
-        <NavLink
-          to={"/login"}
-          className={({ isActive }) =>
-            isActive ? styles.navBar__linkActive : ""
-          }
-        >
-          <span>Login</span>
-        </NavLink>
-      </li>
-      <li className={`${getLinkThema()}`}>
-        <NavLink
-          to={"/registration"}
-          className={({ isActive }) =>
-            isActive ? styles.navBar__linkActive : ""
-          }
-        >
-          <span>Registration</span>
-        </NavLink>
-      </li>
+      {user ? null : (
+        <>
+          <li className={`${getLinkThema()}`}>
+            <NavLink
+              to={"/login"}
+              className={({ isActive }) =>
+                isActive ? styles.navBar__linkActive : ""
+              }
+            >
+              <span>Login</span>
+            </NavLink>
+          </li>
+          <li className={`${getLinkThema()}`}>
+            <NavLink
+              to={"/registration"}
+              className={({ isActive }) =>
+                isActive ? styles.navBar__linkActive : ""
+              }
+            >
+              <span>Registration</span>
+            </NavLink>
+          </li>
+        </>
+      )}
     </nav>
   );
 };

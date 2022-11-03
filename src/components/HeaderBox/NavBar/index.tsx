@@ -4,11 +4,11 @@ import { MenuNavBar } from "../MenuNavBar";
 import { Wrapper } from "../../PageElementsBox/Wrapper";
 import { ChexBoxThema } from "../СhexBoxThema";
 import styles from "./style.module.css";
-import { ContextThema } from "../../../App";
+import { ContextAll } from "../../../App";
 
 export const NavBar = () => {
   const { isNavBarVisible, setIsNavBarVisible } = useContext(ContextBurger);
-  const { isThema, setIsThema } = useContext(ContextThema);
+  const { isThema, setIsThema } = useContext(ContextAll);
 
   const getNavBarThema = () => {
     if (isThema) {

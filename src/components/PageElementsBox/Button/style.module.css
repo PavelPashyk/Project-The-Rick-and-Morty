@@ -56,6 +56,13 @@
   color: #fc0000;
 }
 
+.btnForm[disabled]:hover {
+  background: rgb(104 191 217);
+  border: 3px solid rgb(4, 111, 157);
+  color: rgb(244 72 59);
+  box-shadow: none;
+}
+
 .btnStart {
   background-color: rgb(13, 90, 51);
   border: 3px solid rgb(83, 194, 98);

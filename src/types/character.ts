@@ -22,3 +22,13 @@ interface IPropLocation {
   name: string;
   url: string;
 }
+
+export interface IPropsLocationItem {
+  id?: number;
+  name?: string;
+  type?: string;
+  dimension: string;
+  residents: string[];
+  url?: string;
+  created?: string;
+}

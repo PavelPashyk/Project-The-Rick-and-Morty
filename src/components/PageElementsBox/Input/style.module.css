@@ -1,14 +1,29 @@
-.inputBlock {
+.inputBlockNight {
   position: relative;
 }
 
-.inputBlock svg {
+.inputBlockNight svg {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  fill: rgb(126, 123, 68);
+}
+
+.inputBlockNight input::placeholder {
+  color: rgb(126, 123, 68);
+}
+
+.inputBlockDay {
+  position: relative;
+}
+
+.inputBlockDay svg {
   position: absolute;
   left: 10px;
   top: 7px;
   fill: rgb(107, 78, 61);
 }
 
-input::placeholder {
+.inputBlockDay input::placeholder {
   color: rgb(107, 78, 61);
 }

@@ -1,8 +1,9 @@
 import styles from "./style.module.css";
-import { ChangeEventHandler } from "react";
+import { ChangeEventHandler, useContext } from "react";
 import { Svg } from "../Svg";
+import { ContextAll } from "../../../App";
 
-interface IPropsInput {
+  interface IPropsInput {
   value?: string | number;
   placeholder?: string;
   maxlength?: number;
@@ -11,6 +12,9 @@ interface IPropsInput {
   classNameInput?: string;
   onChangeInput?: ChangeEventHandler<HTMLInputElement>;
   inputSvg?: string;
+  /** */
+  ref?: any;
+  /** */
 }
 
 export const Input = ({
@@ -22,9 +26,14 @@ export const Input = ({
   classNameInput,
   onChangeInput,
   inputSvg,
+  /** */
+  ref,
+  /** */
 }: IPropsInput) => {
+  const { isThema, setIsThema } = useContext(ContextAll);
+
   return (
-    <div className={styles.inputBlock}>
+    <div className={`${isThema ? styles.inputBlockNight : styles.inputBlockDay}`} >
       <input
         value={value}
         placeholder={placeholder}
@@ -34,6 +43,9 @@ export const Input = ({
         name={name}
         className={`${classNameInput}`}
         onChange={onChangeInput}
+        /** */
+        ref={ref}
+        /** */
       />
       <Svg id={`${inputSvg}`} />
     </div>

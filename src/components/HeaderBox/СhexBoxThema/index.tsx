@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { ContextThema } from "../../../App";
-import { Input } from "../../PageElementsBox/Input";
+import { useContext, useEffect } from "react";
+import { ContextAll } from "../../../App";
 import styles from "./style.module.css";
 
 export const ChexBoxThema = () => {
-  const { isThema, setIsThema } = useContext(ContextThema);
+  const { isThema, setIsThema } = useContext(ContextAll);
 
   const toggleThema = () => {
     if (isThema) {
@@ -16,10 +15,10 @@ export const ChexBoxThema = () => {
 
   return (
     <label className={styles.chexbox__switch}>
-      <Input
-        classNameInput={styles.chexbox__input}
+      <input
+        className={styles.chexbox__input}
         type="checkbox"
-        onChangeInput={toggleThema}
+        onChange={toggleThema}
       />
       <div
         className={`${
