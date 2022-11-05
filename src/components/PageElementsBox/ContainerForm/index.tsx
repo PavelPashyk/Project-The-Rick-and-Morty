@@ -1,5 +1,5 @@
 import { ReactNode, useContext } from "react";
-import { ContextThema } from "../../../App";
+import { ContextAll } from "../../../App";
 import styles from "./style.module.css";
 
 interface IPropsConteinerForm {
@@ -7,7 +7,7 @@ interface IPropsConteinerForm {
 }
 
 export const ContainerForm = ({ children }: IPropsConteinerForm) => {
-  const { isThema, setIsThema } = useContext(ContextThema);
+  const { isThema, setIsThema } = useContext(ContextAll);
 
   return (
     <div className={isThema ? styles.form__blockNight : styles.form__blockDay}>

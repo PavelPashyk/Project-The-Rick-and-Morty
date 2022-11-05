@@ -1,30 +1,89 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { getUser } from "./api/auth";
 import "./App.css";
 import { RootRouter } from "./router";
+import { IUser } from "./types/auth";
 
-export const ContextThema = createContext<{
+export const ContextAll = createContext<{
   isThema: boolean;
   setIsThema: (value: boolean) => void;
+  isLoadingBlock: boolean;
+  setIsLoadingBlock: (value: boolean) => void;
+  isErrorValidation: boolean;
+  setIsErrorValidation: (value: boolean) => void;
+  user: IUser | null;
+  setUser: (value: IUser | null) => void;
 }>({
-  isThema: false,
+  isThema: true,
   setIsThema: () => {},
+  isLoadingBlock: false,
+  setIsLoadingBlock: () => {},
+  isErrorValidation: false,
+  setIsErrorValidation: () => {},
+  user: null,
+  setUser: (value: IUser | null) => {},
 });
 
+const access = localStorage.getItem("access");
+
+const getInitialTheme = (): boolean => {
+  const localThema = localStorage.getItem("theme");
+  if (localThema === "true") {
+    return true;
+  }
+  return false;
+};
+
 function App() {
-  const [isThema, setIsThema] = useState(false);
+  const [isThema, setIsThema] = useState(getInitialTheme());
+  const [isLoadingBlock, setIsLoadingBlock] = useState(true);
+  const [isErrorValidation, setIsErrorValidation] = useState(false);
+  const [user, setUser] = useState<IUser | null>(null);
+  const [isReady, setIsReady] = useState(!access);
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(isThema));
+  }, [isThema])
+
+
+  useEffect(() => {
+    let isOk = true;
+    if (access) {
+      getUser()
+        .then((response) => {
+          if (response.ok) {
+            isOk = true;
+          } else {
+            isOk = false;
+          }
+          return response.json();
+        })
+        .then((json) => {
+          if (isOk) {
+            setUser(json);
+          }
+        });
+    }
+  }, []);
 
   return (
-    <ContextThema.Provider
+    <ContextAll.Provider
       value={{
         isThema: isThema,
         setIsThema: setIsThema,
+        isLoadingBlock: isLoadingBlock,
+        setIsLoadingBlock: setIsLoadingBlock,
+        isErrorValidation: isErrorValidation,
+        setIsErrorValidation: setIsErrorValidation,
+        user,
+        setUser,
       }}
     >
       <BrowserRouter>
         <RootRouter />
       </BrowserRouter>
-    </ContextThema.Provider>
+    </ContextAll.Provider>
   );
 }
 

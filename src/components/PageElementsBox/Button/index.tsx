@@ -14,7 +14,7 @@ interface IPropsBtn {
   type: "button" | "submit" | "reset" | undefined;
   typeStyles: btnStyles;
   classNameBtn?: string;
-  onClickBtn: () => void;
+  onClickBtn?: () => void;
 }
 
 const getStylesBtn = (typeStyles: btnStyles) => {

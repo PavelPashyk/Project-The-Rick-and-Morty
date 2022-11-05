@@ -108,7 +108,7 @@
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #1400bb;
+  color: #00e7ff;
   padding-bottom: 5px;
   text-align: center;
 }
@@ -117,10 +117,19 @@
   font-weight: 600;
 }
 
-.character__text {
-  font-size: 19px;
+.character__textBlockDay .character__text {
+  font-size: 22px;
+  color: #1e0019;
+}
+.character__textBlockNight .character__text {
+  font-size: 22px;
+  color: #12e38c;
 }
 
-.character__textBlock span {
-  color:#000f46;
+.character__textBlockDay span {
+  color: #000f46;
+}
+
+.character__textBlockNight span {
+  color: #11dfc2;
 }

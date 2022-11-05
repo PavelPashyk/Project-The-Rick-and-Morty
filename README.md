@@ -12,7 +12,7 @@ We will use the API: __[Character](https://rickandmortyapi.com/api/character)__.
 
 There is a total of 826 characters sorted by id.
 __Example request by id:__
-![Example request by id](./src/assets/images/api.jpg)
+![Example request by id](./src/assets/api.jpg)
 ___
 ## Project description:
 * authorization

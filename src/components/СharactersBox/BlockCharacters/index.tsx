@@ -1,17 +1,22 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ContextAll } from "../../../App";
+import { ContextSearch } from "../../../pages/Main";
 import { IPropsCharacterItem } from "../../../types/character";
 import { ListCharacters } from "../ListCharacters";
 import styles from "./style.module.css";
 
 export const BlockCharacters = () => {
   const [personages, setPersonages] = useState<IPropsCharacterItem[]>([]);
+  const { isLoadingBlock, setIsLoadingBlock } = useContext(ContextAll);
+  const [counter, setCounter] = useState(1);
+  let [numberPage, setNumberPage] = useState(1);
+  const { searchText, setSearchText } = useContext(ContextSearch);
+
   const navigate = useNavigate();
   const navigateToFullPost = (id: number | undefined) => {
     navigate(`/page_full_post/${id}`);
   };
-
-  const [counter, setCounter] = useState(1);
 
   const onClickNextPage = () => {
     setCounter(counter + 1);
@@ -21,19 +26,22 @@ export const BlockCharacters = () => {
   };
 
   useEffect(() => {
+    setIsLoadingBlock(true);
     const promise = fetch(
-      `https://rickandmortyapi.com/api/character/?page=${counter}`
+      `https://rickandmortyapi.com/api/character/?page=${counter}&name=${searchText}`
     );
     promise
       .then((response) => {
-        console.log(response);
         return response.json();
       })
       .then((values) => {
-        console.log(values.results);
+        setNumberPage((numberPage = values.info.pages));
         setPersonages(values.results);
+      })
+      .finally(() => {
+        setIsLoadingBlock(false);
       });
-  }, [counter]);
+  }, [counter, searchText]);
 
   return (
     <>
@@ -43,7 +51,7 @@ export const BlockCharacters = () => {
         onClickBack={onClickBackPage}
         onClickNext={onClickNextPage}
         disabledBack={counter === 1 ? true : false}
-        disabledNext={counter === 42 ? true : false}
+        disabledNext={counter === numberPage ? true : false}
         count={counter}
       />
     </>

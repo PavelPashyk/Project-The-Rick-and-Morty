@@ -4,16 +4,33 @@ import { Header } from "../../components/HeaderBox/Header";
 import { charactersArrayTest } from "../../mocks/charactersArrayTest";
 import styles from "./style.module.css";
 import { BlockCharacters } from "../../components/СharactersBox/BlockCharacters";
-import { ContextThema } from "../../App";
-import { useContext } from "react";
+import { ContextAll } from "../../App";
+import { createContext, useContext, useState } from "react";
+
+  export const ContextSearch = createContext<{
+    searchText: string;
+    setSearchText: (value: string) => void;
+  }>({
+    searchText: "",
+    setSearchText: () => {},
+  });
 
 export const Main = () => {
-  const { isThema, setIsThema } = useContext(ContextThema);
-
+  const { isThema, setIsThema } = useContext(ContextAll);
+  const [searchText, setSearchText] = useState("");
+  
   return (
+    <ContextSearch.Provider
+      value={{
+        searchText: searchText,
+        setSearchText: setSearchText,
+      }}
+    >
     <ContainerBack stylesBackGround={`${isThema ? "bgAllNight" : "bgAllDay"}`}>
       <Header />
       <BlockCharacters />
     </ContainerBack>
+    </ContextSearch.Provider>
+    
   );
 };

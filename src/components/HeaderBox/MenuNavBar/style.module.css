@@ -14,7 +14,7 @@
 }
 
 .navBar__linkNight span {
-  color: rgb(12, 118, 147);
+  color: #00e7ff;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 20px;
@@ -28,7 +28,7 @@
 }
 
 .navBar__linkNight:hover span {
-  color: rgb(12, 118, 147);
+  color: #3bb7ff;
   border-bottom: 2px solid rgb(64, 157, 251);
   transition: all 0.3s linear;
 }

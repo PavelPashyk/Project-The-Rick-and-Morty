@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { ContextAll } from "../../App";
-import { FormLogin } from "../../components/FormBox/FormLogin";
+import { FormActivation } from "../../components/FormBox/FormActivation";
 import { Header } from "../../components/HeaderBox/Header";
 import { ContainerBack } from "../../components/PageElementsBox/ContainerBack";
 import styles from "./style.module.css";
 
-export const PageLogin = () => {
+export const PageActivation = () => {
   const { isThema, setIsThema } = useContext(ContextAll);
 
   return (
@@ -13,7 +13,7 @@ export const PageLogin = () => {
       stylesBackGround={`${isThema ? "bgFormNight" : "bgFormDay"}`}
     >
       <Header />
-      <FormLogin />
+      <FormActivation />
     </ContainerBack>
   );
 };

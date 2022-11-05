@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
-import { ContextThema } from "../../../App";
+import { ContextAll } from "../../../App";
 import { ContextBurger } from "../Header";
 import styles from "./style.module.css";
 
 export const Burger = () => {
   const [activeBurger, setActiveBurger] = useState(false);
   const { isNavBarVisible, setIsNavBarVisible } = useContext(ContextBurger);
-  const { isThema, setIsThema } = useContext(ContextThema);
+  const { isThema, setIsThema } = useContext(ContextAll);
 
   const toggleActiveBurger = () => {
     if (activeBurger === false && isNavBarVisible === false) {

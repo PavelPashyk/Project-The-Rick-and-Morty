@@ -20,3 +20,70 @@
   letter-spacing: 2px;
   margin-bottom: 50px;
 }
+
+.form__blockInput input::placeholder {
+  color: rgb(126, 68, 68);
+}
+
+.errorText {
+  letter-spacing: 1.5px;
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  color: red;
+}
+
+.form__blockSvgName {
+  position: relative;
+}
+.svgNameNo svg {
+  position: absolute;
+  left: 10px;
+  top: 32px;
+  fill: red;
+}
+
+.form__blockSvgEmail {
+  position: relative;
+}
+.svgEmail svg {
+  position: absolute;
+  left: 10px;
+  top: 32px;
+  fill: rgb(126, 68, 68);
+}
+.form__blockSvgEmail {
+  position: relative;
+}
+.svgEmailNo svg {
+  position: absolute;
+  left: 10px;
+  top: 32px;
+  fill: red;
+}
+
+.form__blockSvgPassword {
+  position: relative;
+}
+.svgPassword svg {
+  position: absolute;
+  left: 10px;
+  top: 32px;
+  fill: rgb(126, 68, 68);
+}
+.form__blockSvgPassword {
+  position: relative;
+}
+.svgPasswordNo svg {
+  position: absolute;
+  left: 10px;
+  top: 32px;
+  fill: red;
+}
+
+.errorResponseText {
+  padding: 10px;
+  color: red;
+  margin: 0 auto;
+  letter-spacing: 1.2px;
+}
