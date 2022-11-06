@@ -131,6 +131,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .fullPost__itemDay {
@@ -145,10 +146,10 @@
   background-color: #304436;
   letter-spacing: normal;
   user-select: none;
+  cursor: pointer;
 }
 
 .fullPost__itemDay:hover {
-  cursor: default;
   box-shadow: 0px 0px 10px 5px #eaff79;
 }
 
@@ -164,10 +165,10 @@
   background-color: #304436;
   letter-spacing: normal;
   user-select: none;
+  cursor: pointer;
 }
 
 .fullPost__itemNight:hover {
-  cursor: default;
   box-shadow: 0px 0px 10px 5px #00e7ff;
 }
 
@@ -180,4 +181,53 @@
   width: 600px;
   height: auto;
   margin: 30px 0;
+}
+
+@media (max-width: 560px) {
+  .fullPost__infoPersonage {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fullPost__img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .fullPost__blockItemDay,
+  .fullPost__blockItemNight {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .fullPost__img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.module__block {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(23, 35, 38, 0.9);
+}
+
+.module__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 500px;
+  width: 100%;
+  max-height: 700px;
+  height: 100%;
+  background: #fbfbf9;
+  transform: translate(-50%, -50%);
+  padding: 20px;
 }

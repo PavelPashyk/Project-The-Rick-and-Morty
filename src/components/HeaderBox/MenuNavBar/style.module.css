@@ -1,12 +1,12 @@
 .navBar__menu {
-  width: 70%;
+  width: 90%;
   padding: 10px 30px;
   display: flex;
   gap: 20px;
 }
 
 .navBar__linkDay span {
-  color: rgb(27, 174, 237);
+  color: rgb(0, 231, 255);
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 20px;
@@ -14,7 +14,7 @@
 }
 
 .navBar__linkNight span {
-  color: #00e7ff;
+  color: rgb(27, 174, 237);
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 20px;
@@ -51,4 +51,11 @@
 .navBar__linkActive:hover span {
   border-bottom: 2px solid transparent;
   color: rgb(0, 255, 68);
+}
+
+@media (max-width: 783px) {
+  .navBar__menu {
+    width: 80%;
+    flex-wrap: wrap;
+  }
 }

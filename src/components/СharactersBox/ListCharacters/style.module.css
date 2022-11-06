@@ -3,6 +3,7 @@
   gap: 20px;
   flex-wrap: wrap;
   padding-bottom: 20px;
+  justify-content: center;
 }
 
 .characterList__box {
@@ -44,5 +45,15 @@
   }
   100% {
     background-position: 0 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .characterList__boxBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
   }
 }

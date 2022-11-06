@@ -14,6 +14,8 @@ export const ContextAll = createContext<{
   setIsErrorValidation: (value: boolean) => void;
   user: IUser | null;
   setUser: (value: IUser | null) => void;
+  openName: number;
+  setOpenName: (value: number) => void;
 }>({
   isThema: true,
   setIsThema: () => {},
@@ -23,6 +25,8 @@ export const ContextAll = createContext<{
   setIsErrorValidation: () => {},
   user: null,
   setUser: (value: IUser | null) => {},
+  openName: + "",
+  setOpenName: () => {},
 });
 
 const access = localStorage.getItem("access");
@@ -41,6 +45,7 @@ function App() {
   const [isErrorValidation, setIsErrorValidation] = useState(false);
   const [user, setUser] = useState<IUser | null>(null);
   const [isReady, setIsReady] = useState(!access);
+  const [openName, setOpenName] = useState<number>(0);
 
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(isThema));
@@ -78,6 +83,8 @@ function App() {
         setIsErrorValidation: setIsErrorValidation,
         user,
         setUser,
+        openName: openName,
+        setOpenName: setOpenName,
       }}
     >
       <BrowserRouter>
