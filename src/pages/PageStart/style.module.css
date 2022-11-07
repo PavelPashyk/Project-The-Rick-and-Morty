@@ -3,3 +3,10 @@
   align-items: center;
   height: 100vh;
 }
+
+@media (max-width: 1024px) {
+  .pageStart__box {
+    justify-content: center;
+  }
+  
+}

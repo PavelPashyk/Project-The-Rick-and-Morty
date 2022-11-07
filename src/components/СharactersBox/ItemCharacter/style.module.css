@@ -16,7 +16,7 @@
   align-items: center;
   transition: all ease 0.3s;
   box-shadow: inset 2px 2px 25px rgba(77, 241, 225, 0.5),
-    0px 0px 20px 4px rgb(90 223 108);
+    0px 0px 20px 4px rgb(90 223 206);
   cursor: default;
 }
 
@@ -56,11 +56,11 @@
 
 .character__blockItemDay:hover {
   background-color: rgb(12, 118, 147);
-  box-shadow: 0px 0px 10px 6px rgb(144, 2, 139);
+  box-shadow: 0px 0px 10px 6px rgb(4, 124, 148);
 }
 .character__blockItemNight:hover {
   background-color: rgb(104, 128, 135);
-  box-shadow: 0px 0px 10px 6px rgb(83, 104, 226);
+  box-shadow: 0px 0px 10px 6px rgb(83, 173, 226);
 }
 
 .character__blockItemDay:active {
@@ -132,4 +132,36 @@
 
 .character__textBlockNight span {
   color: #11dfc2;
+}
+
+@media (max-width: 765px) {
+  .character__blockItemDay,
+  .character__blockItemNight {
+    width: 300px;
+    height: 390px;
+  }
+
+  .character__img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .character__blockItemDay h2 {
+    font-size: 30px;
+  }
+
+  .character__blockItemNight h2 {
+    font-size: 30px;
+  }
+
+  .character__title {
+    font-size: 30px;
+  }
+
+  .character__textBlockDay .character__text {
+    font-size: 28px;
+  }
+  .character__textBlockNight .character__text {
+    font-size: 28px;
+  }
 }

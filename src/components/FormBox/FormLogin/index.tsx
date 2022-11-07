@@ -14,7 +14,7 @@ import styles from "./style.module.css";
 
 export const FormLogin = () => {
   const [errorResponseLogin, setErrorResponseLogin] = useState("");
-  const { setUser } = useContext(ContextAll);
+  const { setUser, isThema, setIsThema } = useContext(ContextAll);
 
   const {
     register,
@@ -25,17 +25,13 @@ export const FormLogin = () => {
 
   const navigate = useNavigate();
   const navigateToRegistration = () => {
-    navigate("/main");
+    navigate("/registration");
   };
 
   const onClickRegistration: SubmitHandler<IPropsForm> = (data) => {
-    console.log(JSON.stringify(data));
-
     if (isValid) {
-      console.log("отправлена");
       const promise = login(data.email, `${data.password}`);
       let isOk = true;
-
       promise
         .then((response) => {
           if (response.ok) {
@@ -54,24 +50,12 @@ export const FormLogin = () => {
                 return response.json();
               })
               .then((user) => {
-                console.log(user);
                 navigate("/main");
                 setUser(user);
               });
           } else {
-            console.log("не отправлено");
             if (
-              json?.email?.includes(
-                "No active account found with the given credentials"
-              )
-            ) {
-              setErrorResponseLogin(
-                "Please try again: no active account found with the given credentials."
-              );
-              return;
-            }
-            if (
-              json?.password?.includes(
+              json?.detail?.includes(
                 "No active account found with the given credentials"
               )
             ) {
@@ -173,7 +157,7 @@ export const FormLogin = () => {
         <FormText
           text={"Don't have an account? "}
           onClickToPage={navigateToRegistration}
-          textLink={"Signup now"}
+          textLink={"Register now"}
         />
       </ContainerForm>
     </Wrapper>

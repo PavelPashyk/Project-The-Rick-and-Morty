@@ -76,12 +76,12 @@
 }
 
 .search__textDay::placeholder {
-  color: rgb(0 200 255);
+  color: rgba(0, 231, 255, 0.6);
   letter-spacing: 3px;
   font-weight: 700;
 }
 .search__textNight::placeholder {
-  color: rgb(12, 118, 147);
+  color: rgba(27, 174, 237, 0.6);
   letter-spacing: 3px;
   font-weight: 700;
 }

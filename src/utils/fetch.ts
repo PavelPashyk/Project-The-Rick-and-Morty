@@ -12,12 +12,7 @@ export const tmsFetch = async (url: string, config?: RequestInit) => {
         }
       : config?.headers,
   };
-
-  /**
-   * config --- {method: 'GET', headers: {'Content-type': 'json'}, body: '...'}
-   * newConfig --- {method: 'GET', headers: {'Content-type': 'json', Authorization: `Bearer ${access}`,}, body: '...'}
-   */
-
+  
   const response = await fetch(url, newConfig);
 
   if (response.ok === false && response.status === 401) {
@@ -31,7 +26,6 @@ export const tmsFetch = async (url: string, config?: RequestInit) => {
         const { access } = await responseToken.json();
 
         localStorage.setItem("access", access);
-        //перезапрос
         const refreshedResponse = await fetch(url, {
           ...config,
           headers: {
@@ -39,7 +33,6 @@ export const tmsFetch = async (url: string, config?: RequestInit) => {
             ...config?.headers,
           },
         });
-
         return refreshedResponse;
       }
     }
