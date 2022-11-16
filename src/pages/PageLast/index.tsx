@@ -19,7 +19,7 @@ export const PageLast = () => {
           </h2>
           <p>
             Resource:{" "}
-            <a className={styles.link} href="https://rickandmortyapi.com/">
+            <a className={styles.link} href="https://rickandmortyapi.com/" target="_blank">
               https://rickandmortyapi.com/
             </a>
           </p>

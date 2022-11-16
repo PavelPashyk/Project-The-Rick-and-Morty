@@ -23,12 +23,12 @@
 .headere__menuDay {
   display: flex;
   align-items: center;
-  color: rgb(0 200 255);
+  color: rgb(0, 231, 255);
 }
 .headere__menuNight {
   display: flex;
   align-items: center;
-  color: rgb(12, 118, 147);
+  color: rgb(27, 174, 237);
 }
 
 .top {
@@ -42,7 +42,7 @@
 }
 
 .headereNight svg{
-  fill: rgb(12, 118, 147);
+  fill: rgb(27, 174, 237);
   margin: 0 10px;
 
 }

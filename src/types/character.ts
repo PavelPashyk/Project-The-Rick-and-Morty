@@ -11,6 +11,7 @@ export interface IPropsCharacterItem {
   episode?: string[];
   url?: string;
   created?: string;
+  favorites?: boolean;
 }
 
 interface IPropOrigin {

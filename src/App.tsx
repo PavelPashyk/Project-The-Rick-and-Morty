@@ -25,7 +25,7 @@ export const ContextAll = createContext<{
   setIsErrorValidation: () => {},
   user: null,
   setUser: (value: IUser | null) => {},
-  openName: + "",
+  openName: 0,
   setOpenName: () => {},
 });
 

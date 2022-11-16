@@ -18,6 +18,7 @@
   box-shadow: inset 2px 2px 25px rgba(77, 241, 225, 0.5),
     0px 0px 20px 4px rgb(90 223 206);
   cursor: default;
+  position: relative;
 }
 
 .character__blockItemNight {
@@ -40,6 +41,7 @@
   box-shadow: inset 2px 2px 25px rgb(244 252 255 / 50%),
     0px 0px 20px 4px rgb(112 119 143);
   cursor: default;
+  position: relative;
 }
 
 @keyframes gradient {
@@ -88,7 +90,7 @@
 .character__img {
   width: 210px;
   height: 210px;
-  border-radius: 55px 15px 40px 25px;
+  border-radius: 60px 15px 40px 25px;
   margin: 10px 0px;
   overflow: hidden;
   user-select: none;
@@ -164,4 +166,36 @@
   .character__textBlockNight .character__text {
     font-size: 28px;
   }
+}
+
+.character__svgBlockActive,
+.character__svgBlock {
+  width: 25px;
+height: 25px;
+position: absolute;
+top: 5px;
+left: 5px;
+}
+
+.character__svgBlockActive svg {
+  fill: rgb(255, 255, 0);
+  transition: all .4s linear;
+  cursor: pointer;
+}
+
+.character__svgBlock svg {
+  fill: rgb(255, 255, 255);
+  transition: all .4s linear;
+  cursor: pointer;
+}
+
+.character__svgBlockActive:hover svg,
+.character__svgBlock:hover svg {
+  transform: rotate3d(1, 1, 1, 360deg) scale(1.2);
+}
+
+.character__svgBlockActive:active svg,
+.character__svgBlock:active svg {
+  transform: scale(0.8);
+  transition: all .1s linear;
 }

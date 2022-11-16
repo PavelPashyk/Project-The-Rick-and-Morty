@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ContextAll } from "../../../App";
 import { IPropsCharacterItem } from "../../../types/character";
 import { Button } from "../../PageElementsBox/Button";
