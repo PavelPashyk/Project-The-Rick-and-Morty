@@ -8,6 +8,7 @@ import { PageNotFound } from "../pages/PageNotFound";
 import { PageFullPost } from "../pages/PageFullPost";
 import { PageSuccess } from "../pages/PageSuccess";
 import { PageActivation } from "../pages/PageActivation";
+import { PageMyPost } from "../pages/PageMyPosts";
 
 export const RootRouter = () => {
   return (
@@ -15,6 +16,7 @@ export const RootRouter = () => {
       <Route path="/" element={<PageStart />} />
       <Route path="/page_full_post/:personId" element={<PageFullPost />} />
       <Route path="/main" element={<Main />} />
+      <Route path="/page_my_posts" element={<PageMyPost />} />
       <Route path="/registration" element={<PageRegistration />} />
       <Route path="/login" element={<PageLogin />} />
       <Route path="/success" element={<PageSuccess />} />
