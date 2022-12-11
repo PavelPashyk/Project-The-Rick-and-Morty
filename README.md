@@ -1,5 +1,6 @@
 # Website project - The Rick and Morty
 A site to search for characters from "The Rick and Morty" universe.
+
 The project website is located at https://react-project-rick-and-morty.netlify.app/
 ___
 ## The project used:
