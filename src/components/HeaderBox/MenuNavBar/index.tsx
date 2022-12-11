@@ -66,6 +66,20 @@ export const MenuNavBar = () => {
           </li>
         </>
       )}
+      {!user ? null : (
+        <>
+          <li className={`${getLinkThema()}`}>
+            <NavLink
+              to={"/page_my_posts"}
+              className={({ isActive }) =>
+                isActive ? styles.navBar__linkActive : ""
+              }
+            >
+              <span>My Posts</span>
+            </NavLink>
+          </li>
+        </>
+      )}
     </nav>
   );
 };

@@ -1,7 +1,8 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ContextAll } from "../../../App";
 import { no_image } from "../../../assets/images";
 import { IPropsCharacterItem } from "../../../types/character";
+import { Svg } from "../../PageElementsBox/Svg";
 import styles from "./style.module.css";
 
 interface IPropsCharactersItem extends IPropsCharacterItem {
@@ -15,7 +16,16 @@ export const ItemCharacter = ({
   image,
   onClickCharacter,
 }: IPropsCharactersItem) => {
-  const { isThema, setIsThema } = useContext(ContextAll);
+  const { isThema, setIsThema, user } = useContext(ContextAll);
+  
+  const [star, setStar] = useState(false);
+  const toggleIsStar = () => {
+    if (star) {
+      setStar(false);
+    } else {
+      setStar(true);
+    }
+  };
   return (
     <div
       className={
@@ -47,6 +57,9 @@ export const ItemCharacter = ({
           {species}
         </p>
       </div>
+      {!user ? null : (<div className={star ? styles.character__svgBlockActive : styles.character__svgBlock} onClick={toggleIsStar}>
+        <Svg id={"star"} />
+      </div>)}
     </div>
   );
 };
